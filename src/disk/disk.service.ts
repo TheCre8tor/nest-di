@@ -8,4 +8,10 @@ export class DiskService {
   constructor(powerService: PowerService) {
     this.powerService = powerService;
   }
+
+  getData(): string {
+    console.log('Drawing 20 watts of power from power service');
+    this.powerService.supplyPower(20);
+    return 'data!';
+  }
 }
